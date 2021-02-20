@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "My first post"
+title:  "ML post"
 date:   2021-02-19 17:15:08 +0530
-categories: jekyll update
+category: ML
 ---
 
 
