@@ -35,6 +35,9 @@ linkedin_username: "omkar-chavan-b59702116"
 plugins:
   - jekyll-feed
 
+# only get the first sentece for the excerpt
+excerpt_separator: .
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
