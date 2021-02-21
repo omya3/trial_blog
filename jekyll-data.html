@@ -1,0 +1,56 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Using jekyll data</h1>
+    <h2>following are the posts..</h2>
+    {% for post in site.posts %}
+        <p>Post title: {{post.title}}</p>
+        <p>Post date: {{post.date}}</p>
+    {% endfor %}
+
+    <h2>Page data</h2>
+    {% for page in site.pages %}
+        {% if page.title!=null %}
+            <p>Page title: {{page.title}}</p>
+        {% endif %}
+    {% endfor %}
+
+    <h2>Config.yml</h2>
+    <p>git hub username :{{ site.github_username}}</p>
+
+    <h2> Latest post </h2>
+    {% for post in site.posts limit:1 %}
+        {{post.title}}
+    {% endfor %}
+
+    <h2> All other posts </h2>
+    {% for post in site.posts offset:1 %}
+        <p>{{post.title}}</p>
+    {% endfor %}
+
+    <h2> Plus one more post </h2>
+    {% for post in site.posts offset:1 limit:1 %}
+        <p>{{post.title}}</p>
+    {% endfor %}
+
+    <h2> Research post </h2>
+    {% assign naPosts = site.posts | where: "type","Research" %}
+    {% for post in naPosts %}
+        <p>{{post.title}}</p>
+    {% endfor %}
+
+    <h2> All other posts with links </h2>
+    {% for post in site.posts offset:1 %}
+        <a href="{{- post.url | relative_url -}}">{{post.title}}  |  </a>
+    {% endfor %}
+
+</body>
+</html>
