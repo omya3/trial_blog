@@ -55,4 +55,6 @@ sample.to_csv('submission.csv',index=False)
 |----------|
 |2. [EDA on LISH MoA dataset]({{ site.baseurl }}{% post_url /MoA_inner_posts/2021-02-22-MoA_EDA %})|
 |-------------------|
-|4. [ML techniques on MoA dataset]({{ site.baseurl }}{% post_url /MoA_inner_posts/2021-02-22-MoA_ML %})
+|4. [ML techniques on MoA dataset]({{ site.baseurl }}{% post_url /MoA_inner_posts/2021-02-22-MoA_ML %})|
+|-------------------|
+|5. [DL techniques on MoA dataset]({{ site.baseurl }}{% post_url /MoA_inner_posts/2021-02-22-MoA_DL %})|
